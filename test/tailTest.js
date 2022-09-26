@@ -5,6 +5,6 @@ const words = ["Yo Yo", "Lighthouse", "Labs"];
 
 describe("#tail", () => {
   it('should return "Lighthouse", "Labs"', () => {
-    assert.strictEqual(assertEqual(words.length, 3));
+    assert.deepEqual(assertEqual(words.length, 3));
   });
 });
