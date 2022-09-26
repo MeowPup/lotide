@@ -1,30 +1,6 @@
-const eqArrays = function(arrayOne, arrayTwo) {
-  let a = arrayOne.length;
-  let b = arrayTwo.length;
-  
-  if (a !== b) {
-    return false;
-  }
+const eqArrays = require('./eqArrays');
+const assertArraysEqual = require('./assertArraysEqual');
 
-  for (let i = 0; i < arrayOne.length; i++) {
-    if (arrayOne[i] !== arrayTwo[i]) {
-      return false;
-    }
-  }
-  return true;
-};
-
-// assertArraysEqual function
-const assertArraysEqual = function(arrayOne, arrayTwo) {
-  let result = eqArrays(arrayOne, arrayTwo);
-  if (result) {
-    console.log("✅");
-  } else {
-    console.log("❌");
-  }
-};
-
-//findKey function
 const findKey = function(str, callback) {
   for (let key in str) {
     if (callback(str[key])) {
@@ -47,3 +23,5 @@ assertArraysEqual(findKey({
   "Annie": { adult: true},
   "Sally": { adult: false}
 }, x => x.adult === true), "Annie");
+
+module.exports = findKey;

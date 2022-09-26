@@ -33,3 +33,5 @@ const eqObjects = function(objA, objB) {
   }
   return true;
 };
+
+module.exports = eqObjects;
